@@ -8,14 +8,14 @@ class Test{
         friend std::ostream& operator << (std::ostream& out, Test& o);
 };
 
-std::istream& operator >> (std::istream& in, Test& o){
-    in >> o.x;
-    return in;
+std::istream& operator >> (std::istream& cin, Test& o){
+    cin >> o.x;
+    return cin;
 }
 
-std::ostream& operator << (std::ostream& out, Test& o){
-    out << o.x;
-    return out;
+std::ostream& operator << (std::ostream& cout, Test& o){
+    cout << o.x;
+    return cout;
 }
 
 int main(){
